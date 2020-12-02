@@ -1,0 +1,72 @@
+body{
+    font-family: 'Inter', sans-serif;
+    width: 80%;
+    margin: 10%;
+}
+
+h1{
+    font-size: 25px;
+    margin-bottom: 0;  
+}
+p{
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+    margin-top: 5px;  
+}
+.mode{
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+    border-top: 2px solid grey;
+    padding: 20px 0;
+    
+}
+.icon-toggle-on{
+    font-size: 40px;
+    position: relative; left: 160px;  
+}
+.card{
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 5px;
+    padding: 10%;
+    border-top: 5px solid  hsl(208, 92%, 53%);
+    margin-bottom: 40px;
+}
+.card-profile{
+    text-align: center;
+    color: hsl(228, 12%, 44%);
+    
+}
+.card-profile .name{
+    margin-left: 5px;
+}
+.number{
+    text-align: center;
+    color: hsl(163, 72%, 41%);
+    font-weight: 700;
+}
+.number h1{
+    color: black;
+    font-size: 80px;
+    margin-top: 5px;
+}
+.number p{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+.yt .number span{
+    color: hsl(348, 97%, 39%);
+}
+.inst{
+    border-width: 5px;
+    border-style: solid;
+    border-image-source: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    
+}
+.yt{
+    border-top: 5px solid  hsl(348, 97%, 39%);
+}
