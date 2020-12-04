@@ -1,9 +1,24 @@
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Inter', sans-serif;
-    width: 80%;
-    margin: 10%;
+    width: 90%;
+    margin: 10% auto;
+   
 }
-
+/* top background */
+.top-bg{
+    background-color: hsl(225, 100%, 98%);
+    width: 100%;
+    height: 15rem;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+        /* header */
 h1{
     font-size: 25px;
     margin-bottom: 0;  
@@ -13,20 +28,23 @@ p{
     font-weight: 700;
     margin-top: 5px;  
 }
+    /* mode */
 .mode{
     color: hsl(228, 12%, 44%);
     font-weight: 700;
     border-top: 2px solid grey;
     padding: 20px 0;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
 }
 .icon-toggle-on{
-    font-size: 40px;
-    position: relative; left: 160px;  
+    font-size: 30px;  
 }
+     /* top cards */
 .card{
     background-color: hsl(225, 100%, 98%);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10%;
     border-top: 5px solid  hsl(208, 92%, 53%);
     margin-bottom: 40px;
@@ -70,3 +88,37 @@ p{
 .yt{
     border-top: 5px solid  hsl(348, 97%, 39%);
 }
+ /* bottom cards */
+ h2{
+     color: hsl(228, 12%, 44%);
+ }
+
+ .bottom-cards{
+     border: none;
+     padding: 20px 30px;
+    
+     
+ }
+ .page, .counts{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .incerase {
+    font-size: 15px;
+    font-weight: 700;
+    color: hsl(163, 72%, 41%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    
+  }
+  .counts h1{
+      font-size: 40px;
+      
+  }
+ .decrease{
+     color: hsl(356, 69%, 56%);
+     align-self: flex-end;
+ }
