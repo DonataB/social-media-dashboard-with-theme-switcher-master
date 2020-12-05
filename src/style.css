@@ -41,18 +41,25 @@ p{
 .icon-toggle-on{
     font-size: 30px;  
 }
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "followersfb"
+    "followerstw"
+    "followersinst"
+    "followersyt";
+}
      /* top cards */
 .card{
     background-color: hsl(225, 100%, 98%);
     border-radius: 10px;
     padding: 10%;
-    border-top: 5px solid  hsl(208, 92%, 53%);
     margin-bottom: 40px;
 }
 .card-profile{
     text-align: center;
-    color: hsl(228, 12%, 44%);
-    
+    color: hsl(228, 12%, 44%);  
 }
 .card-profile .name{
     margin-left: 5px;
@@ -75,7 +82,21 @@ p{
 .yt .number span{
     color: hsl(348, 97%, 39%);
 }
-.inst{
+.fb-followers{
+    grid-area: followersfb;
+    height: 240px;
+    border-top: 5px solid  hsl(208, 92%, 53%);
+}
+.tw-followers{
+    grid-area: followerstw;
+    height: 240px;
+    border-top: 5px solid hsl(203, 89%, 53%);
+}
+.inst-followers{
+    grid-area: followersinst;
+    height: 240px;
+    /* border-top: 5px solid hsl(203, 89%, 53%); */
+    /* background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)); */
     border-width: 5px;
     border-style: solid;
     border-image-source: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
@@ -83,21 +104,23 @@ p{
     border-left: none;
     border-right: none;
     border-bottom: none;
-    
 }
-.yt{
-    border-top: 5px solid  hsl(348, 97%, 39%);
+.yt-followers{
+    grid-area: followersyt;
+    height: 240px;
+    border-top: 5px solid hsl(348, 97%, 39%);
 }
- /* bottom cards */
+.yt-followers span{
+    color: hsl(356, 69%, 56%);
+}
+
+/* overview */
  h2{
      color: hsl(228, 12%, 44%);
  }
-
+ /* bottom cards */
  .bottom-cards{
-     border: none;
-     padding: 20px 30px;
-    
-     
+     padding: 20px 30px;   
  }
  .page, .counts{
      display: flex;
@@ -106,19 +129,62 @@ p{
  }
  .incerase {
     font-size: 15px;
-    font-weight: 700;
     color: hsl(163, 72%, 41%);
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: flex-end;
-    
   }
   .counts h1{
-      font-size: 40px;
-      
+      font-size: 40px;    
   }
  .decrease{
      color: hsl(356, 69%, 56%);
      align-self: flex-end;
+ }
+ .bottom-container{
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+    "fb"
+    "fb"
+    "ins"
+    "ins"
+    "tw"
+    "tw"
+    "yt"
+    "yt";
+ }
+ @media only screen and (min-width: 1440px){
+     body{
+         margin: 50px auto 20px;
+         height: 90vh;
+     }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "followersfb followerstw followersinst followersyt";
+        grid-gap: 0 20px;
+        height: 30vh;
+    }
+    .bottom-container{
+        display: grid;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas: 
+        "fb fb ins ins"
+        "tw tw yt yt";
+        grid-gap: 0 20px;
+        height: 50vh;
+     }
+     .mode{
+         border: none;
+         display: flex;
+         justify-content: flex-end;
+         position: relative;
+         top: -80px;
+     }
+     .header{
+        height: 80px;
+     }
  }
