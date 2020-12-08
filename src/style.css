@@ -38,10 +38,40 @@ p{
     justify-content: space-between;
     align-items: center; 
 }
-.icon-toggle-on{
-    font-size: 30px;  
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+    background-color: hsl(230, 22%, 74%);
+    border-radius: 30px;
+    transition: all 0.3s;
 }
 
+.switch::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 25px;
+    border-radius: 28px;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s;
+}
+
+input[type='checkbox']:checked + .switch::after {
+    transform: translateX(30px);
+}
+
+input[type='checkbox']:checked + .switch {
+    background-image: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
 .container{
     display: grid;
     grid-template-rows: repeat(4, 1fr);
@@ -95,15 +125,9 @@ p{
 .inst-followers{
     grid-area: followersinst;
     height: 240px;
-    /* border-top: 5px solid hsl(203, 89%, 53%); */
-    /* background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)); */
-    border-width: 5px;
-    border-style: solid;
-    border-image-source: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-    border-image-slice: 1;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    background-size: 100% 6px;
+    background-repeat: no-repeat;   
 }
 .yt-followers{
     grid-area: followersyt;
@@ -187,4 +211,29 @@ p{
      .header{
         height: 80px;
      }
+     .switch{
+         margin-left: 20px;
+     }
  }
+ /* @media only screen and (min-width: 375px) and (max-width: 800px){
+    .container{
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "followersfb followerstw"
+        "followersinst followersyt";
+        grid-gap: 20px;
+    }
+    .mode{
+        border: none;
+    }
+    .bottom-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "fb fb ins"
+                            "ins tw tw"
+                            "yt yt";
+        grid-gap: 10px;
+    }
+ }  */
