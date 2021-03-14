@@ -1,15 +1,34 @@
 *{
     box-sizing: border-box;
 }
+:root {
+    --bg-color: hsl(0, 0%, 100%);
+    --top-bg-pattern: hsl(225, 100%, 98%);
+    --card-bg: hsl(227, 47%, 96%);
+    --blueText: hsl(228, 12%, 44%);
+    --whiteText: hsl(230, 17%, 14%);
+
+}
+
+[theme="dark"] {
+    --bg-color: hsl(230, 17%, 14%);
+    --top-bg-pattern: hsl(232, 19%, 15%);
+    --card-bg: hsl(228, 28%, 20%);
+    --blueText: hsl(228, 34%, 66%);
+    --whiteText: hsl(0, 0%, 100%);
+    
+}
+
 body{
     font-family: 'Inter', sans-serif;
     width: 90%;
     margin: 10% auto;
+    background-color: var(--bg-color);
    
 }
 /* top background */
 .top-bg{
-    background-color: hsl(225, 100%, 98%);
+    background-color: var(--top-bg-pattern);
     width: 100%;
     height: 15rem;
     border-radius: 0 0 20px 20px;
@@ -21,16 +40,17 @@ body{
         /* header */
 h1{
     font-size: 25px;
-    margin-bottom: 0;  
+    margin-bottom: 0; 
+    color: var(--whiteText) 
 }
 p{
-    color: hsl(228, 12%, 44%);
+    color: var(--blueText);
     font-weight: 700;
     margin-top: 5px;  
 }
     /* mode */
 .mode{
-    color: hsl(228, 12%, 44%);
+    color: var(--blueText);
     font-weight: 700;
     border-top: 2px solid grey;
     padding: 20px 0;
@@ -82,14 +102,14 @@ input[type='checkbox']:checked + .switch {
 }
      /* top cards */
 .card{
-    background-color: hsl(225, 100%, 98%);
+    background-color: var(--card-bg);
     border-radius: 10px;
     padding: 10%;
     margin-bottom: 40px;
 }
 .card-profile{
     text-align: center;
-    color: hsl(228, 12%, 44%);  
+    color: var(--blueText);  
 }
 .card-profile .name{
     margin-left: 5px;
@@ -100,7 +120,7 @@ input[type='checkbox']:checked + .switch {
     font-weight: 700;
 }
 .number h1{
-    color: black;
+    color: var(--whiteText);
     font-size: 80px;
     margin-top: 5px;
 }
@@ -140,7 +160,7 @@ input[type='checkbox']:checked + .switch {
 
 /* overview */
  h2{
-     color: hsl(228, 12%, 44%);
+     color: var(--whiteText);
  }
  /* bottom cards */
  .bottom-cards{
@@ -160,7 +180,8 @@ input[type='checkbox']:checked + .switch {
     align-self: flex-end;
   }
   .counts h1{
-      font-size: 40px;    
+      font-size: 40px;  
+      color: var(--whiteText);  
   }
  .decrease{
      color: hsl(356, 69%, 56%);
@@ -179,6 +200,7 @@ input[type='checkbox']:checked + .switch {
     "yt"
     "yt";
  }
+
  @media only screen and (min-width: 1440px){
      body{
          margin: 50px auto 20px;
