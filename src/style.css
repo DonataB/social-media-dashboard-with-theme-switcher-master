@@ -237,25 +237,3 @@ input[type='checkbox']:checked + .switch {
          margin-left: 20px;
      }
  }
- /* @media only screen and (min-width: 375px) and (max-width: 800px){
-    .container{
-        
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "followersfb followerstw"
-        "followersinst followersyt";
-        grid-gap: 20px;
-    }
-    .mode{
-        border: none;
-    }
-    .bottom-container{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "fb fb ins"
-                            "ins tw tw"
-                            "yt yt";
-        grid-gap: 10px;
-    }
- }  */
